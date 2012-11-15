@@ -1,0 +1,37 @@
+.imageTemplate_wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.imageTemplate_wrapper .imageTemplate_overlay {
+    position: absolute;
+    outline: 4000px solid rgba(0,0,0,.4);
+    z-index: 800;
+}
+.imageTemplate_wrapper .imageTemplate_subject {
+    position: absolute;
+    z-index: 799;
+    cursor: move;
+}
+.imageTemplate_wrapper .ui-resizable-handle {
+	background-color: white;
+	border: 1px solid black;
+	width: 5px;
+	height: 5px;
+}
+.imageTemplate_wrapper .ui-resizable-handle.ui-resizable-ne {
+	right: -5px;
+	top: -5px;
+}
+.imageTemplate_wrapper .ui-resizable-handle.ui-resizable-se {
+	right: -5px;
+	bottom: -5px;
+}
+.imageTemplate_wrapper .ui-resizable-handle.ui-resizable-sw {
+	left: -5px;
+	bottom: -5px;
+}
+.imageTemplate_wrapper .ui-resizable-handle.ui-resizable-nw {
+	left: -5px;
+	top: -5px;
+}

@@ -27,12 +27,16 @@
 				var $this = $(this), data = $this.data('imageTemplate');
 				// If the plugin hasn't been initialized yet
 				if (!data) {
+<<<<<<< HEAD
 					if (options.debug)
 						console.log('plugin not yet initialized, initialize now');
 
 					var loadFunction = function() {
 						if (options.debug)
 							console.log('imageLoaded');
+=======
+					$this.get(0).onload = function() {
+>>>>>>> 827d8e972b3f652a35396fb28635496d3911682c
 						var overlayWidth, overlayHeight, overlayOutlineOffset;
 						if (options.width > options.height) {
 							overlayWidth = options.width - options.height;
@@ -122,11 +126,14 @@
 						});
 						options.onInit($imageTemplateSubject, $this.imageTemplate('getSelection'));
 					};
+<<<<<<< HEAD
 					if ($this.width() > 0) {
 						loadFunction.call(this);
 					} else {
 						$this.get(0).onload = loadFunction;
 					}
+=======
+>>>>>>> 827d8e972b3f652a35396fb28635496d3911682c
 				} else {
 					return $this;
 				}
